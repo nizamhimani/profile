@@ -42,8 +42,7 @@ h1,h2,h3,h4,h5.h6{
     margin: 20px;
 }
 
-div.publication-data{
-    background-color: #778899;
+#projects{
     text-align: center;
     height: 300px;
     padding-top: 200px;
@@ -92,7 +91,6 @@ a.nav-link:active{
     color: #fff;
 }
 #skills{
-    background-color: #778899;
     height: 500px;
     text-align: center  ;
 }
