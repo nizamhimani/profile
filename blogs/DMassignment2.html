@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Classifier</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <section>
+           
+        <div class="box">
+            <div class="details">
+                <h4>Himani Nizam</h4>
+                
+            </div>
+            <div class="heading">
+                <h1><u>Naive Bayes Classifier</u></h1>
+            </div>
+             
+               <h2 class="heading2"><b><u>Code</u></b></h2>
+               <p class="heading2">First, we need to load and merge the dataset into one.Then we preprocess the data by removing stop words, punctuation and other
+unwanted characters for make the dataframe more accurater for further
+processing.After preprocesssing the dataframe then, we will divide the dataset into three
+parts: training, development, and test sets.
+First divide the dataset equally for that 60 percent data for training and 20
+percent each for development and for testing.This how the dataframe is divided into three parts
+
+               </p>
+               <img src="assignment2/1.png" alt="">
+               <img src="assignment2/2.png" alt="">
+               <img src="assignment2/3.png" alt="">
+               <img src="assignment2/4.png" alt="">
+               <img src="assignment2/5.png" alt="">
+               <img src="assignment2/6.png" alt="">
+               <p class="heading2">Now we build a vocabulary of all the words in the training set, omitting rare
+words with frequency less than five. A reverse index dictionary will be created,
+mapping each word to a unique integer value.</p>
+               <img src="assignment2/7.png" alt="">
+               <p class="heading2">
+We  calculate the probability of the occurrence of each word in the training
+set. Conditional probability based on the sentiment will also be calculated.
+Smoothing can be applied to prevent zero probabilities when a word is not
+present in a particular class.Lets view the probabilities of first 10 words in the vocubulary.
+
+</p>
+               <img src="assignment2/8.png" alt="">
+               <img src="assignment2/9.png" alt="">
+               <img src="assignment2/10.png" alt="">
+               <p class="heading2">This code defines a function called classify that takes in a review and a
+boolean flag smoothing, which indicates whether to apply smoothing or not.
+The function uses Naive Bayes algorithm to classify the review as either
+"fresh" or "rotten" based on the words present in the review.
+If smoothing is set to True, smoothing is applied to the probabilities of words
+in the reviews. Otherwise, no smoothing is applied.
+The function first calculates the prior probabilities for "fresh" and "rotten"
+reviews, based on the number of reviews that are labeled as "fresh" and
+"rotten" in the training set
+Finally, the function compares the probability of the review being "fresh" to the
+probability of the review being "rotten". If the probability of the review being
+"fresh" is greater than the probability of the review being "rotten", the function
+returns "fresh". Otherwise, it returns "rotten".
+</p>
+               <img src="assignment2/11.png" alt="">
+               
+               <p class="heading2">The model will make predictions on the development set.
+Accuracy is calculated to evaluate the performance of the model.</p>
+               <img src="assignment2/12.png" alt="">
+               <p class="heading2">We will experiment with different values of smoothing parameters and
+evaluate their impact on model performance.We derive the top 10 words that predict each class.We then calculate P[class | word] for each word in the vocabulary.
+</p>
+               <img src="assignment2/13.png" alt="">
+               <img src="assignment2/14.png" alt="">
+               <img src="assignment2/15.png" alt="">
+               <p class="heading2">The model is evaluated on the test set using the optimal
+hyperparameters selected based on the development set.
+</p>
+               <img src="assignment2/16.png" alt="">
+               
+               
+              
+               <h5 class="heading2"><b><u>Reference</u></b></h5>
+               <ol>
+                <li>https://vitalflux.com/quick-introduction-smoothing-techniques-language-models/</li>
+                
+               </ol>
+
+                <div class="heading2">
+                    <a  href="assignment2/code.zip" download="code"><button>Naive Bayes Classifier code</button></a>
+                </div>
+
+        </div>
+
+    </section>
+        
+    </body>
+</html>
